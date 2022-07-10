@@ -18,6 +18,8 @@ class LoadingScreen extends StatelessWidget {
             () =>
             Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (BuildContext context) => LandingScreen())));
+
+
     return Scaffold(
       backgroundColor: colors.scaffoldColor,
       body: CustomSliverView(
