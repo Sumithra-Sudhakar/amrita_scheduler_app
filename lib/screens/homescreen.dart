@@ -67,7 +67,8 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(42))),
             ),
-          )
+          ),
+
         ],
       ),
     );
