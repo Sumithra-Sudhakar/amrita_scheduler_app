@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scheduler_app/screens/loadingscreen.dart';
-import 'package:scheduler_app/screens/request_meeting.dart';
+
+import 'package:scheduler_app/screens/request_meeting_intro.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 import 'package:scheduler_app/widgets/custom_sliver_widget.dart';
 
