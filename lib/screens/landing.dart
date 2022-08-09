@@ -4,8 +4,8 @@ import 'package:scheduler_app/screens/loadingscreen.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 import 'package:scheduler_app/widgets/custom_sliver_widget.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class LandingScreen extends StatelessWidget {
+  const LandingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             child: Container(
               height: 100,
               width: 100,
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
             ),
           ),
           Padding(
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
             child: Text(
               "Scheduler",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 40,
                   fontWeight: FontWeight.w600),
             ),
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
             child: Text(
               "The one stop scheduling solutions for all Amritians",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 18,
                   fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,
@@ -56,12 +56,12 @@ class HomePage extends StatelessWidget {
               child: Text(
                 "Login With Office 365",
                 style: GoogleFonts.raleway(
-                    color: colors.buttontextcolor,
+                    color: colors.buttonTextColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               style: ElevatedButton.styleFrom(
-                  primary: colors.primarybuttoncolor,
+                  primary: colors.primaryButtonColor,
                   padding: const EdgeInsets.symmetric(
                       horizontal: 50, vertical: 20),
                   shape: RoundedRectangleBorder(

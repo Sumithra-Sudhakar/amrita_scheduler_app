@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 import 'package:scheduler_app/widgets/custom_sliver_widget.dart';
 
-import 'landingScreen.dart';
+import 'preferences_onboarding.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class LoadingScreen extends StatelessWidget {
         Duration(seconds: 3),
             () =>
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => LandingScreen())));
+                builder: (BuildContext context) => PreferencesOnboardingScreen())));
 
 
     return Scaffold(
@@ -29,7 +29,7 @@ class LoadingScreen extends StatelessWidget {
             child: Container(
               height: 356,
               width: 259,
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
             ),
           ),
           Padding(
@@ -37,7 +37,7 @@ class LoadingScreen extends StatelessWidget {
             child: Text(
               "Please Wait",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 40,
                   fontWeight: FontWeight.w600),
             ),
@@ -47,7 +47,7 @@ class LoadingScreen extends StatelessWidget {
             child: Text(
               "Connecting to your Outlook account to seamlessly schedule",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 18,
                   fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,

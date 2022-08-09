@@ -4,16 +4,16 @@ import 'package:scheduler_app/screens/eventscreen.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 import 'package:scheduler_app/widgets/custom_sliver_widget.dart';
 
-import 'loadingscreen.dart';
 
-class LandingScreen extends StatefulWidget {
-  const LandingScreen({Key? key}) : super(key: key);
+
+class PreferencesOnboardingScreen extends StatefulWidget {
+  const PreferencesOnboardingScreen({Key? key}) : super(key: key);
 
   @override
-  State<LandingScreen> createState() => _LandingScreenState();
+  State<PreferencesOnboardingScreen> createState() => _PreferencesOnboardingScreenState();
 }
 
-class _LandingScreenState extends State<LandingScreen> {
+class _PreferencesOnboardingScreenState extends State<PreferencesOnboardingScreen> {
   var items = <String>["Choose Visibility", "Public", "Private"];
 
   String selectval = "Public";
@@ -31,7 +31,7 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(
                 "Preferences",
                 style: GoogleFonts.raleway(
-                    color: colors.primarytextcolor,
+                    color: colors.primaryTextColor,
                     fontSize: 30,
                     fontWeight: FontWeight.w500),
               ),
@@ -44,14 +44,14 @@ class _LandingScreenState extends State<LandingScreen> {
                 Text(
                   "Schedule Visiblity",
                   style: GoogleFonts.raleway(
-                      color: colors.primarytextcolor,
+                      color: colors.primaryTextColor,
                       fontSize: 20,
                       fontWeight: FontWeight.w400),
                 ),
                 Spacer(),
                 DecoratedBox(
                   decoration: BoxDecoration(
-                    color: colors.secondarybuttoncolor,
+                    color: colors.secondaryButtonColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
@@ -65,7 +65,7 @@ class _LandingScreenState extends State<LandingScreen> {
                             child: Text(
                               "Public",
                               style: GoogleFonts.raleway(
-                                color: colors.buttontextcolor,
+                                color: colors.buttonTextColor,
                               ),
                             ),
                             value: "Public"),
@@ -73,7 +73,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           child: Text(
                             "Private",
                             style: GoogleFonts.raleway(
-                              color: colors.buttontextcolor,
+                              color: colors.buttonTextColor,
                             ),
                           ),
                           value: "Private",
@@ -98,7 +98,7 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(
                 "Set your availability",
                 style: GoogleFonts.raleway(
-                    color: colors.primarytextcolor,
+                    color: colors.primaryTextColor,
                     fontSize: 22,
                     fontWeight: FontWeight.w400),
                 textAlign: TextAlign.left,
@@ -110,7 +110,7 @@ class _LandingScreenState extends State<LandingScreen> {
             child: Text(
               "Tell us when you’re typically available for meetings",
               style: GoogleFonts.raleway(
-                color: colors.primarytextcolor,
+                color: colors.primaryTextColor,
                 fontSize: 18,
               ),
             ),
@@ -122,7 +122,7 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(
                 "Hours",
                 style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 20,
                 ),
               ),
@@ -136,7 +136,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 Spacer(),
                 DecoratedBox(
                   decoration: BoxDecoration(
-                    color: colors.secondarybuttoncolor,
+                    color: colors.secondaryButtonColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
@@ -150,7 +150,7 @@ class _LandingScreenState extends State<LandingScreen> {
                             child: Text(
                               "Public",
                               style: GoogleFonts.raleway(
-                                color: colors.buttontextcolor,
+                                color: colors.buttonTextColor,
                               ),
                             ),
                             value: "Public"),
@@ -158,7 +158,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           child: Text(
                             "Private",
                             style: GoogleFonts.raleway(
-                              color: colors.buttontextcolor,
+                              color: colors.buttonTextColor,
                             ),
                           ),
                           value: "Private",
@@ -177,7 +177,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 ),
                 DecoratedBox(
                   decoration: BoxDecoration(
-                    color: colors.secondarybuttoncolor,
+                    color: colors.secondaryButtonColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
@@ -191,7 +191,7 @@ class _LandingScreenState extends State<LandingScreen> {
                             child: Text(
                               "Public",
                               style: GoogleFonts.raleway(
-                                color: colors.buttontextcolor,
+                                color: colors.buttonTextColor,
                               ),
                             ),
                             value: "Public"),
@@ -199,7 +199,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           child: Text(
                             "Private",
                             style: GoogleFonts.raleway(
-                              color: colors.buttontextcolor,
+                              color: colors.buttonTextColor,
                             ),
                           ),
                           value: "Private",
@@ -224,7 +224,7 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(
                 "Days",
                 style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 20,
                 ),
               ),
@@ -280,12 +280,12 @@ class _LandingScreenState extends State<LandingScreen> {
               child: Text(
                 "CONTINUE",
                 style: GoogleFonts.raleway(
-                    color: colors.buttontextcolor,
+                    color: colors.buttonTextColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               style: ElevatedButton.styleFrom(
-                  primary: colors.primarybuttoncolor,
+                  primary: colors.primaryButtonColor,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                   shape: RoundedRectangleBorder(
@@ -302,12 +302,12 @@ class _LandingScreenState extends State<LandingScreen> {
       child: Text(
         day,
         style: GoogleFonts.raleway(
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
             fontSize: 12,
             fontWeight: FontWeight.w400),
       ),
       style: ElevatedButton.styleFrom(
-          primary: colors.secondarybuttoncolor,
+          primary: colors.secondaryButtonColor,
           padding: const EdgeInsets.symmetric(
               horizontal: 30, vertical: 20),
           shape: RoundedRectangleBorder(

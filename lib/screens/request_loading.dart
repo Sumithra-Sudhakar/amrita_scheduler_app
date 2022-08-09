@@ -27,7 +27,7 @@ class RequestLoading extends StatelessWidget {
             child: Container(
               height: 356,
               width: 259,
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
             ),
           ),
 
@@ -36,7 +36,7 @@ class RequestLoading extends StatelessWidget {
             child: Text(
               "Please wait while we find slots for you to request!",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 18,
                   fontWeight: FontWeight.w400),
               textAlign: TextAlign.center,

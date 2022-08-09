@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scheduler_app/screens/homescreen.dart';
+import 'package:scheduler_app/screens/landing.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
 
       ),
-      home: HomePage(),
+      home: LandingScreen(),
     );
   }
 }

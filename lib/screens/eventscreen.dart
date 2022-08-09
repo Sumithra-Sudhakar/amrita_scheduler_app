@@ -30,7 +30,7 @@ Row(
             child: Text(
               "WELCOME!",
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 20,
                    ),
             ),
@@ -41,7 +41,7 @@ Row(
           child: Text(
             "SUMITHRA SUDHAKAR",
             style: GoogleFonts.raleway(
-                color: colors.primarytextcolor,
+                color: colors.primaryTextColor,
                 fontSize: 22,
                 fontWeight: FontWeight.w400),
           ),
@@ -52,7 +52,7 @@ Row(
     Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton.icon(
-        icon: Icon(Icons.add, color: colors.buttontextcolor,),
+        icon: Icon(Icons.add, color: colors.buttonTextColor,),
         label: Text(""),
         onPressed: () {
           Navigator.of(context).push(
@@ -61,7 +61,7 @@ Row(
               }));
         },
       style: ElevatedButton.styleFrom(
-      primary: colors.primarybuttoncolor,
+      primary: colors.primaryButtonColor,
       padding: const EdgeInsets.fromLTRB(10, 20, 5, 20),
       shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10))),
@@ -76,7 +76,7 @@ Row(
             child: Align(
               alignment: Alignment.topLeft,
               child: Text("UPCOMING",   style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 20,
                   fontWeight: FontWeight.w400),),
             ),

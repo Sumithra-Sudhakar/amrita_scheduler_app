@@ -26,11 +26,11 @@ class _RequestMeetingState extends State<RequestMeeting> {
 
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios, color: colors.primarytextcolor,),
+          icon: Icon(Icons.arrow_back_ios, color: colors.primaryTextColor,),
           onPressed: (){Navigator.pop(context);},
         ),
         title: Text("Request Meeting", style: GoogleFonts.raleway(
-          color: colors.primarytextcolor,
+          color: colors.primaryTextColor,
           fontSize: 25
 
         ),),
@@ -42,7 +42,7 @@ class _RequestMeetingState extends State<RequestMeeting> {
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text("Choose a Person", style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
                   fontSize: 20
 
               ),),
@@ -53,7 +53,7 @@ class _RequestMeetingState extends State<RequestMeeting> {
             width: 365,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-color: colors.secondarybuttoncolor
+color: colors.secondaryButtonColor
             ),
 
             child: GestureDetector(
@@ -82,7 +82,7 @@ color: colors.secondarybuttoncolor
               padding: const EdgeInsets.fromLTRB(15.0, 80, 15, 20),
               child: Text("HOW DOES IT WORK?", style: GoogleFonts.raleway(
                 fontSize: 17,
-                color: colors.primarytextcolor
+                color: colors.primaryTextColor
               ),),
             ),
           ),
@@ -92,7 +92,7 @@ color: colors.secondarybuttoncolor
             child: Text("-When you select a person to meet, the app will  check their Outlook calendar to identify time slots that they’re free in.", textAlign: TextAlign.left,
             style: GoogleFonts.raleway(
                 fontSize: 15,
-                color: colors.primarytextcolor
+                color: colors.primaryTextColor
             ),
             ),
           ),
@@ -102,7 +102,7 @@ color: colors.secondarybuttoncolor
             child: Text("-The list is displayed to you and you can pick a slot that works well with your schedule, and proceed with the appointment. ", textAlign: TextAlign.left,
               style: GoogleFonts.raleway(
                   fontSize: 15,
-                  color: colors.primarytextcolor
+                  color: colors.primaryTextColor
               ),
             ),
           ),
@@ -111,7 +111,7 @@ color: colors.secondarybuttoncolor
             child: Text("-Once you’ve requested an appointment, the other person can then either accept / deny / reschedule your request and updates will be relayed to you through notifications.", textAlign: TextAlign.left,
               style: GoogleFonts.raleway(
                   fontSize: 15,
-                  color: colors.primarytextcolor
+                  color: colors.primaryTextColor
               ),
             ),
           ),
@@ -127,12 +127,12 @@ color: colors.secondarybuttoncolor
               child: Text(
                 "CONTINUE",
                 style: GoogleFonts.raleway(
-                    color: colors.buttontextcolor,
+                    color: colors.buttonTextColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
               style: ElevatedButton.styleFrom(
-                  primary: colors.primarybuttoncolor,
+                  primary: colors.primaryButtonColor,
                   padding: const EdgeInsets.symmetric(
                       horizontal: 50, vertical: 20),
                   shape: RoundedRectangleBorder(
