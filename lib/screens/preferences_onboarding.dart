@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:scheduler_app/screens/eventscreen.dart';
 import 'package:scheduler_app/utils/colors.dart' as colors;
 import 'package:scheduler_app/widgets/custom_sliver_widget.dart';
+import 'package:scheduler_app/widgets/dropdown_widget.dart';
 
 
 
@@ -23,6 +24,7 @@ class _PreferencesOnboardingScreenState extends State<PreferencesOnboardingScree
     return Scaffold(
       backgroundColor: colors.scaffoldColor,
       body: CustomSliverView(
+        padding: EdgeInsets.all(15.0),
         columnList: [
           Align(
             alignment: Alignment.topLeft,
@@ -33,63 +35,13 @@ class _PreferencesOnboardingScreenState extends State<PreferencesOnboardingScree
                 style: GoogleFonts.raleway(
                     color: colors.primaryTextColor,
                     fontSize: 30,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-            child: Row(
-              children: [
-                Text(
-                  "Schedule Visiblity",
-                  style: GoogleFonts.raleway(
-                      color: colors.primaryTextColor,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400),
-                ),
-                Spacer(),
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: colors.secondaryButtonColor,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 2.0, horizontal: 8.0),
-                    child: DropdownButton(
-                      underline: Container(),
-                      value: selectval,
-                      items: [
-                        DropdownMenuItem(
-                            child: Text(
-                              "Public",
-                              style: GoogleFonts.raleway(
-                                color: colors.buttonTextColor,
-                              ),
-                            ),
-                            value: "Public"),
-                        DropdownMenuItem(
-                          child: Text(
-                            "Private",
-                            style: GoogleFonts.raleway(
-                              color: colors.buttonTextColor,
-                            ),
-                          ),
-                          value: "Private",
-                        )
-                      ],
-                      onChanged: (value) {
-                        setState(() {
-                          selectval = value.toString();
-                        });
-                      },
-                    ),
-                  ),
-                ),
-                Spacer()
-              ],
-            ),
+            child: DropDownFormField(list: ['PUBLIC','PRIVATE'], title: 'Schedule visibility', hint: 'Pick an option'),
           ),
           Align(
             alignment: Alignment.topLeft,
@@ -100,13 +52,13 @@ class _PreferencesOnboardingScreenState extends State<PreferencesOnboardingScree
                 style: GoogleFonts.raleway(
                     color: colors.primaryTextColor,
                     fontSize: 22,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.w600),
                 textAlign: TextAlign.left,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 15.0),
             child: Text(
               "Tell us when you’re typically available for meetings",
               style: GoogleFonts.raleway(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomSliverView extends StatelessWidget {
-  const CustomSliverView({Key? key, required this.columnList})
+  CustomSliverView({Key? key, required this.columnList, this.padding})
       : super(key: key);
   final List<Widget> columnList;
+  EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,11 @@ class CustomSliverView extends StatelessWidget {
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
-          child: Column(
-            children: columnList,
+          child: Padding(
+            padding: padding ?? EdgeInsets.zero,
+            child: Column(
+              children: columnList,
+            ),
           ),
         ),
       ],

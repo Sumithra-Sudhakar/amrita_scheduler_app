@@ -5,4 +5,6 @@ var primaryTextColor = const Color(0xffFFFFFF);
 var secondaryButtonColor = const Color(0xff373F4D);
 var primaryButtonColor = const Color(0xffFFFFFF);
 var buttonTextColor = const Color(0xff000000);
+var textBoxColor = const Color(0xff373F4D);
+
 
