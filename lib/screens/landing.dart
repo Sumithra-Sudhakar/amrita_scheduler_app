@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scheduler_app/screens/loadingscreen.dart';
@@ -13,62 +15,59 @@ class LandingScreen extends StatelessWidget {
       backgroundColor: colors.scaffoldColor,
       body: CustomSliverView(
         columnList: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 100, 10, 50),
-            child: Container(
-              height: 100,
-              width: 100,
-              color: colors.primaryTextColor,
+          Expanded(
+            flex: 1,
+            child: Container(),
+          ),
+          Container(height: 100,
+            width: 100,
+            color: colors.primaryTextColor,),
+          Expanded(flex: 1, child: Container()),
+          Expanded(flex: 1,child: Text(
+            "Scheduler",
+            style: GoogleFonts.raleway(
+                color: colors.primaryTextColor,
+                fontSize: 40,
+                fontWeight: FontWeight.w600),
+          ),),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "The one stop scheduling solutions for all Amritians",
+                style: GoogleFonts.raleway(
+                    color: colors.primaryTextColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400),
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          Expanded(flex: 2, child: Container()),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return const LoadingScreen();
+                  }));
+            },
+            style: ElevatedButton.styleFrom(
+                primary: colors.primaryButtonColor,
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 50, vertical: 20),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(42))),
             child: Text(
-              "Scheduler",
+              "Login With O365",
               style: GoogleFonts.raleway(
-                  color: colors.primaryTextColor,
-                  fontSize: 40,
+                  color: colors.buttonTextColor,
+                  fontSize: 18,
+                  fontFeatures: const <FontFeature>[FontFeature.enable('pwid')],
                   fontWeight: FontWeight.w600),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "The one stop scheduling solutions for all Amritians",
-              style: GoogleFonts.raleway(
-                  color: colors.primaryTextColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400),
-              textAlign: TextAlign.center,
-            ),
-          ),
-
-
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 270, 10, 50),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (BuildContext context) {
-                      return LoadingScreen();
-                    }));
-              },
-              child: Text(
-                "Login With Office 365",
-                style: GoogleFonts.raleway(
-                    color: colors.buttonTextColor,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              ),
-              style: ElevatedButton.styleFrom(
-                  primary: colors.primaryButtonColor,
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 50, vertical: 20),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(42))),
-            ),
-          ),
-
+      Expanded(flex: 2, child: Container())
         ],
       ),
     );
